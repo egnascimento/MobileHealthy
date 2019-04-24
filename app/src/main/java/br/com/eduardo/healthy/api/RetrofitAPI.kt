@@ -4,12 +4,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import okhttp3.OkHttpClient
 import com.facebook.stetho.okhttp3.StethoInterceptor
+import com.google.gson.GsonBuilder
+import com.google.gson.Gson
+
+
 
 class RetrofitAPI<T> {
-
     fun getClient(c: Class<T>) : T {
+
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://192.168.0.104:3030")
+            .baseUrl("http://192.168.0.26:3030")
             .addConverterFactory(GsonConverterFactory.create())
             .client(getOkhttpClient())
             .build()

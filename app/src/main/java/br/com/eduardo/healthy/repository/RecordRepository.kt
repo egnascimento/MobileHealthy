@@ -31,4 +31,19 @@ class RecordRepository {
 
     }
 
+    fun salvar(record: Record,
+               onComplete: (Record) -> Unit,
+               onError: (Throwable?) -> Unit) {
+        getRecordAPI()
+            .salvar(record)
+            .enqueue(object : Callback<Record>{
+                override fun onFailure(call: Call<Record>, t: Throwable) {
+                    onError(t)
+                }
+                override fun onResponse(call: Call<Record>, response: Response<Record>) {
+                    onComplete(response.body()!!)
+                }
+            })
+    }
+
 }

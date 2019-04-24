@@ -11,7 +11,8 @@ import kotlinx.android.synthetic.main.record_item.view.*
 
 class MainListAdapter(
     val context:Context,
-    val records: List<Record>
+    val records: List<Record>,
+    val clickLista: (Record) -> Unit
 ) :
     RecyclerView.Adapter<MainListAdapter.RecordViewHolder>() {
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): RecordViewHolder {
@@ -28,16 +29,21 @@ class MainListAdapter(
 
     override fun onBindViewHolder(p0: RecordViewHolder, position: Int) {
         val record = records[position]
-        p0.bindView(record)
+        p0.bindView(record, clickLista)
 
     }
 
     class RecordViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
 
-        fun bindView(record: Record) = with(itemView) {
+        fun bindView(
+            record: Record,
+            clickLista: (Record) -> Unit
+        ) = with(itemView) {
             tvTitulo.text = record.timestamp
-            tvDescricao.text = record.weight + "Kg "  + record.blood_pressure + "mmHg"
+            tvDescricao.text = record.weight + "Kg "  + record.blood_pressure + "mmHg (" + record.more + ")"
+
+            setOnClickListener { clickLista(record) }
         }
 
     }

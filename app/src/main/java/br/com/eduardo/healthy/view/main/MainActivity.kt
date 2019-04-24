@@ -11,6 +11,10 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import br.com.eduardo.healthy.R
+import android.app.Activity
+import android.content.Intent
+
+import br.com.eduardo.healthy.view.formulario.FormularioActivity
 
 import android.view.View
 
@@ -38,10 +42,22 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.buscarTodos()
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            startActivityForResult(
+                Intent(
+                    this,
+                    FormularioActivity::class.java
+                ), 1
+            )
         }
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK) {
+            mainViewModel.buscarTodos()
+        }
+    }
+
 
     private fun registerObservers() {
         mainViewModel.isLoading.observe(this, isLoadingObserver)
@@ -53,17 +69,20 @@ class MainActivity : AppCompatActivity() {
         rvRecords.adapter = MainListAdapter(
             this,
             it!!
-        )
+        ) {
+            Toast.makeText(this, it.timestamp, Toast.LENGTH_SHORT).show()
+        }
 
         rvRecords.layoutManager = LinearLayoutManager(this)
-        //rvNotas.layoutManager = GridLayoutManager(this, 3)
 
     }
 
     private var mensagemErroObserver = Observer<String> {
-        if(it!!.isNotEmpty()) {
-            Toast.makeText(this,
-                it, Toast.LENGTH_LONG).show()
+        if (it!!.isNotEmpty()) {
+            Toast.makeText(
+                this,
+                it, Toast.LENGTH_LONG
+            ).show()
         }
     }
 

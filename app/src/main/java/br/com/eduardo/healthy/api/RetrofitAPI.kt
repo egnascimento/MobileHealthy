@@ -6,7 +6,7 @@ import okhttp3.OkHttpClient
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.google.gson.GsonBuilder
 import com.google.gson.Gson
-
+import java.util.concurrent.TimeUnit
 
 
 class RetrofitAPI<T> {
@@ -25,6 +25,9 @@ class RetrofitAPI<T> {
 fun getOkhttpClient(): OkHttpClient {
     return OkHttpClient.Builder()
         .addNetworkInterceptor(StethoInterceptor())
+        .connectTimeout(30, TimeUnit.SECONDS)
+        .writeTimeout(30, TimeUnit.SECONDS)
+        .readTimeout(30, TimeUnit.SECONDS)
         .build()
 }
 

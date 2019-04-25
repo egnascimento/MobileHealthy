@@ -137,11 +137,11 @@ This section of the page allows you to pull out some outstanding chart that show
 ### *Android Application*
 #### 1. Manage/Access App
 
-(/Screenshots/Screenshot at 2019-04-24 20-43-21.png)
+![GitHub Logo](/Screenshots/Screenshot at 2019-04-24 20-43-21.png)
 
 #### 2. Add New Record
 
-(/Screenshots/Screenshot at 2019-04-24 20-43-48.png)
+![GitHub Logo](/Screenshots/Screenshot at 2019-04-24 20-43-48.png)
 
 #### 3. Edit and Delete 
 

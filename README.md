@@ -4,7 +4,7 @@ Grupo: Luara &amp; Eduardo
 
 
 
-![GitHub Logo](/screenshots/logo.png) :running:
+![GitHub Logo](/Screenshots/logo.png) :running:
 
 People everyday are becoming very busy accross their modern lives. Basically they need to manage too many activities in paralel combining both personal and professional aspects.
 One of the biggest consequences of it, is that their health, even living in a globally food scene where you can find any product being good or not to your health, even thought is becoming worst everyday.
@@ -94,8 +94,9 @@ Access link http://localhost:3030 . You can change the port as you want by editi
 
 ## *Execution:*
 
-This is a step-by-step instruction on how start using and execution the webpage.
+This toll is supported by both Web and Android application, so below is a step-by-step instruction on how start using and execution the webpage or the app throught Android mobiles.
 
+### *Webpage Application*
 #### 1. Manage webpage
 
 This is the main page of the application. Here you can find for specific person its own timeline with corresponding weight, blood pressure and additional details and based on that is possible to see the progress accross the date and time period. There are some main functionalities like Adding New records, Editing and Deleting records and finally generating a Chart based on all the records.
@@ -132,6 +133,19 @@ It is possible, for existing records already saved, in case of any error or dupl
 This section of the page allows you to pull out some outstanding chart that shows the progress accross the timeline showing both Weight and Blood Pressure. This is a great option to perform comparison and see the evolution of the project not only for the good but also to the bad aspect. Enjoy it!
 
 ![image](https://raw.githubusercontent.com/lucriba/EES---UFSCAR---L-E/master/screenshots/chart.png)
+
+### *Android Application*
+#### 1. Manage/Access App
+
+(/Screenshots/Screenshot at 2019-04-24 20-43-21.png)
+
+#### 2. Add New Record
+
+(/Screenshots/Screenshot at 2019-04-24 20-43-48.png)
+
+#### 3. Edit and Delete 
+
+
 
 ## *Versioning:*
 

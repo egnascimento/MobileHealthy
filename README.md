@@ -137,11 +137,11 @@ This section of the page allows you to pull out some outstanding chart that show
 ### *Android Application*
 #### 1. Manage/Access App
 
-![image](https://raw.githubusercontent.com/egnascimento/MobileHealthy/master/Screenshots/Screenshot at 2019-04-24 20-43-21.png)
+![image](https://raw.githubusercontent.com/egnascimento/MobileHealthy/master/Screenshots/Screenshot1.png)
 
 #### 2. Add New Record
 
-![image](https://raw.githubusercontent.com/egnascimento/MobileHealthy/master/Screenshots/Screenshot at 2019-04-24 20-43-48.png)
+![image](https://raw.githubusercontent.com/egnascimento/MobileHealthy/master/Screenshots/Screenshot2.png)
 
 #### 3. Edit and Delete 
 

@@ -17,6 +17,7 @@ import android.content.Intent
 import br.com.eduardo.healthy.view.formulario.FormularioActivity
 
 import android.view.View
+import android.widget.EditText
 
 import br.com.eduardo.healthy.model.Record
 
@@ -24,6 +25,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.loading.*
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_formulario.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -70,7 +72,16 @@ class MainActivity : AppCompatActivity() {
             this,
             it!!
         ) {
-            Toast.makeText(this, it.timestamp, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, it.timestamp, Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, FormularioActivity::class.java)
+            intent.putExtra("bp", it.blood_pressure)
+            intent.putExtra( "wg", it.weight)
+            intent.putExtra( "mr", it.more )
+            intent.putExtra( "tm", it.timestamp)
+
+            startActivityForResult(intent, 1)
+
+
         }
 
         rvRecords.layoutManager = LinearLayoutManager(this)

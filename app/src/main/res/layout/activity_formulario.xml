@@ -19,7 +19,8 @@
                 android:id="@+id/inputBloodPressure">
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:hint="Pressao Arterial"/>
+                      android:hint="Pressao Arterial"
+                      android:id="@+id/etBloodPressure"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -28,7 +29,8 @@
                 android:id="@+id/inputWeight">
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:hint="Peso"/>
+                      android:hint="Peso"
+                      android:id="@+id/etWeigth"/>/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -37,7 +39,8 @@
                 android:id="@+id/inputMore">
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:hint="Comentarios"/>
+                      android:hint="Comentarios"
+                      android:id="@+id/etMore"/>/>
         </android.support.design.widget.TextInputLayout>
 
         <Button android:layout_width="match_parent"

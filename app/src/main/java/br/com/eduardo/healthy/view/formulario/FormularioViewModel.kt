@@ -16,10 +16,11 @@ class FormularioViewModel : ViewModel() {
     fun salvar(
         blood_pressure: String,
         weight: String,
-        more: String
+        more: String,
+        timestamp: String
     ) {
         isLoading.value = true
-        val record = Record(timestamp="", blood_pressure = blood_pressure, weight = weight, more = more )
+        val record = Record(timestamp=timestamp, blood_pressure = blood_pressure, weight = weight, more = more )
         recordRepository.salvar(record,
             onComplete = {
                 isLoading.value = false

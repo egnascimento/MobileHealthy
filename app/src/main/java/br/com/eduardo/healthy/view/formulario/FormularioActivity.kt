@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import br.com.eduardo.healthy.R
 import android.view.View
+import android.widget.EditText
 import android.widget.Toast
 import br.com.eduardo.healthy.model.ResponseStatus
 import kotlinx.android.synthetic.main.activity_formulario.*
@@ -30,6 +31,15 @@ class FormularioActivity : AppCompatActivity() {
                 inputMore.editText?.text.toString()
             )
         }
+
+        val bp = findViewById<EditText>(R.id.etBloodPressure)
+        bp.setText(intent.getStringExtra("bp"))
+
+        val wg = findViewById<EditText>(R.id.etWeigth)
+        wg.setText(intent.getStringExtra("wg"))
+
+        val mr = findViewById<EditText>(R.id.etMore)
+        mr.setText(intent.getStringExtra("mr"))
 
         registerObserver()
     }

@@ -15,4 +15,7 @@ interface RecordAPI {
     @POST("/api/record")
     fun salvar(@Body record: Record): Call<Record>
 
+    @POST("/api/delete")
+    fun excluir(@Body timestamp: String): Call<String>
+
 }

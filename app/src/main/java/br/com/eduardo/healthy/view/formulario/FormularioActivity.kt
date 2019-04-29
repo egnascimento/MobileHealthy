@@ -3,15 +3,19 @@ package br.com.eduardo.healthy.view.formulario
 import android.app.Activity
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.icu.text.SimpleDateFormat
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import br.com.eduardo.healthy.R
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import br.com.eduardo.healthy.model.ResponseStatus
 import kotlinx.android.synthetic.main.activity_formulario.*
 import kotlinx.android.synthetic.main.loading.*
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class FormularioActivity : AppCompatActivity() {
 
@@ -24,11 +28,20 @@ class FormularioActivity : AppCompatActivity() {
         formularioViewModel = ViewModelProviders.of(this)
             .get(FormularioViewModel::class.java)
 
+        val tmstmp = intent.getStringExtra("tm") ?: ""
+
         btSalvar.setOnClickListener {
-            formularioViewModel.salvar(
+       formularioViewModel.salvar(
                 inputBloodPressure.editText?.text.toString(),
                 inputWeight.editText?.text.toString(),
-                inputMore.editText?.text.toString()
+                inputMore.editText?.text.toString(),
+                tmstmp
+            )
+        }
+
+        btExcluir.setOnClickListener {
+            formularioViewModel.excluir(
+                tmstmp
             )
         }
 
@@ -40,6 +53,14 @@ class FormularioActivity : AppCompatActivity() {
 
         val mr = findViewById<EditText>(R.id.etMore)
         mr.setText(intent.getStringExtra("mr"))
+
+        val btDelete = findViewById<Button>(R.id.btExcluir)
+        if(intent.getStringExtra("tm") == null) {
+            btDelete.visibility = View.INVISIBLE
+        }
+        else {
+            btDelete.visibility = View.VISIBLE
+        }
 
         registerObserver()
     }

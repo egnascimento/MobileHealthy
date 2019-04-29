@@ -8,6 +8,11 @@ import android.view.ViewGroup
 import br.com.eduardo.healthy.R
 import br.com.eduardo.healthy.model.Record
 import kotlinx.android.synthetic.main.record_item.view.*
+import java.sql.Timestamp
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 class MainListAdapter(
     val context:Context,
@@ -40,7 +45,19 @@ class MainListAdapter(
             record: Record,
             clickLista: (Record) -> Unit
         ) = with(itemView) {
-            tvTitulo.text = record.timestamp
+
+            val stamp = Timestamp(record.timestamp.toLong())
+            val date = Date(stamp.getTime()).date.toString() + "/" +
+                    (Date(stamp.getTime()).month + 1).toString() + "/" +
+                    (Date(stamp.getTime()).year+1900).toString() + " " +
+            Date(stamp.getTime()).hours.toString() + ":" +
+            Date(stamp.getTime()).minutes.toString() + ":" +
+            Date(stamp.getTime()).seconds.toString()
+
+
+
+
+            tvTitulo.text = date.toString()
             tvDescricao.text = record.weight + "Kg "  + record.blood_pressure + "mmHg (" + record.more + ")"
 
             setOnClickListener { clickLista(record) }

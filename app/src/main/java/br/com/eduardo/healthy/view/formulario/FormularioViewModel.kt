@@ -38,4 +38,20 @@ class FormularioViewModel : ViewModel() {
 
     }
 
+    fun excluir(timestamp: String) {
+        recordRepository.excluir(timestamp,  onComplete = {
+            isLoading.value = false
+            responseStatus.value = ResponseStatus(
+                true,
+                "Dado excluido com sucesso"
+            )
+        }, onError = {
+            isLoading.value = false
+            responseStatus.value = ResponseStatus(
+                false,
+                it?.message!!
+            )
+        })
+    }
+
 }

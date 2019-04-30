@@ -94,7 +94,26 @@ Access link http://localhost:3030 . You can change the port as you want by editi
 
 ## *Execution:*
 
-This toll is supported by both Web and Android application, so below is a step-by-step instruction on how start using and execution the webpage or the app throught Android mobiles.
+This toll is supported by both Web and Android application, so below is a step-by-step instruction on how start using and execution the webpage or the app throught Android mobiles. Check out the video showing the integration --> ![Watch the video](https://www.youtube.com/watch?v=tDEaaRr47Fs&feature=youtu.be)
+
+
+### *Android Application*
+#### 1. Manage/Access App and Records
+
+This is the main page of the app. Here you can find your timeline with corresponding weight, blood pressure and additional details and based on that is possible to see the progress accross the date and time period. There are some main functionalities like Adding New records and displaying it.
+
+![image](https://raw.githubusercontent.com/egnascimento/MobileHealthy/master/Screenshots/Screenshot1.png)
+
+#### 2. Add New Record
+
+This is the functionality to create/add new entry to the page. Basically you need to fill up the following details:
+*Weight*
+*Blood Pressure*
+*More*
+Date and Time information will be automatically populated by the page once a record is submitted/saved.
+
+![image](https://raw.githubusercontent.com/egnascimento/MobileHealthy/master/Screenshots/Screenshot2.png)
+
 
 ### *Webpage Application*
 #### 1. Manage webpage
@@ -133,24 +152,6 @@ It is possible, for existing records already saved, in case of any error or dupl
 This section of the page allows you to pull out some outstanding chart that shows the progress accross the timeline showing both Weight and Blood Pressure. This is a great option to perform comparison and see the evolution of the project not only for the good but also to the bad aspect. Enjoy it!
 
 ![image](https://raw.githubusercontent.com/lucriba/EES---UFSCAR---L-E/master/screenshots/chart.png)
-
-### *Android Application*
-#### 1. Manage/Access App
-
-This is the main page of the app. Here you can find your timeline with corresponding weight, blood pressure and additional details and based on that is possible to see the progress accross the date and time period. There are some main functionalities like Adding New records and displaying it.
-
-![image](https://raw.githubusercontent.com/egnascimento/MobileHealthy/master/Screenshots/Screenshot1.png)
-
-#### 2. Add New Record
-
-This is the functionality to create/add new entry to the page. Basically you need to fill up the following details:
-*Weight*
-*Blood Pressure*
-*More*
-Date and Time information will be automatically populated by the page once a record is submitted/saved.
-
-![image](https://raw.githubusercontent.com/egnascimento/MobileHealthy/master/Screenshots/Screenshot2.png)
-
 
 
 ## *Versioning:*

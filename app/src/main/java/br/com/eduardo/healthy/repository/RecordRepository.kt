@@ -46,17 +46,17 @@ class RecordRepository {
             })
     }
 
-    fun excluir(timestamp: String,
-               onComplete: (String) -> Unit,
+    fun excluir(timestamp: Record,
+               onComplete: (Record) -> Unit,
                onError: (Throwable?) -> Unit) {
 
         getRecordAPI()
             .excluir(timestamp)
-            .enqueue(object : Callback<String>{
-                override fun onFailure(call: Call<String>, t: Throwable) {
+            .enqueue(object : Callback<Record>{
+                override fun onFailure(call: Call<Record>, t: Throwable) {
                     onError(t)
                 }
-                override fun onResponse(call: Call<String>, response: Response<String>) {
+                override fun onResponse(call: Call<Record>, response: Response<Record>) {
                     onComplete(response.body()!!)
                 }
             })

@@ -39,7 +39,9 @@ class FormularioViewModel : ViewModel() {
     }
 
     fun excluir(timestamp: String) {
-        recordRepository.excluir(timestamp,  onComplete = {
+
+        val record = Record(timestamp=timestamp, blood_pressure = "", weight = "", more = "")
+        recordRepository.excluir(record,  onComplete = {
             isLoading.value = false
             responseStatus.value = ResponseStatus(
                 true,

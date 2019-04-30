@@ -1,5 +1,5 @@
 # EES - UFSCAR - Mobile
-Grupo: Luara &amp; Eduardo
+Grupo: Luara Barbosa &amp; Eduardo Garcia
 
 
 
@@ -18,11 +18,11 @@ The project allows you controlling the most basic and important data like weight
 * *Node.Js*
 * *Redis Database*
 * *Visual Studio Code*
+* *Android Studio*
 * *GIT*
 * *Docker*
 * *Bootstrap*
 * *ChartJS*
-* *Android Studio*
 
 
 ## *Prerequisites:*
@@ -30,7 +30,7 @@ The project allows you controlling the most basic and important data like weight
 For using GIT is necessary the instalation of Git aplication.
 
 
-Mandatory having Node.js installed to run this application.
+Mandatory having Node.js and also Android Studio installed to run this application and its integration.
 
 
 #### REDIS DATABASE
@@ -78,7 +78,7 @@ node -v
 npm -v
 ```
 
-#### 1. Install the coding
+#### 1. Install the coding for Visual Studio
 Make sure you have installed and downloaded all files cointaned in this project. In order to do that execute the commands below.
 
 ```sh
@@ -90,6 +90,9 @@ Perform execution of command *nodemon*.
 
 #### 3. Access Webpage
 Access link http://localhost:3030 . You can change the port as you want by editing the file /bin/www .
+
+#### 4. Clone GitHub project into Android Studio
+After cloning the project, simulate/play to be able to simulate scenarios.
 
 
 ## *Execution:*

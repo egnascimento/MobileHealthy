@@ -97,7 +97,7 @@ After cloning the project, simulate/play to be able to simulate scenarios.
 
 ## *Execution:*
 
-This toll is supported by both Web and Android application, so below is a step-by-step instruction on how start using and execution the webpage or the app throught Android mobiles. Check out the video showing the integration --> ![Watch the video](https://www.youtube.com/watch?v=tDEaaRr47Fs&feature=youtu.be)
+This toll is supported by both Web and Android application, so below is a step-by-step instruction on how start using and execution the webpage or the app throught Android mobiles. Check out the video showing the integration --> https://youtu.be/tDEaaRr47Fs
 
 
 ### *Android Application*
@@ -117,6 +117,11 @@ Date and Time information will be automatically populated by the page once a rec
 
 ![image](https://raw.githubusercontent.com/egnascimento/MobileHealthy/master/Screenshots/Screenshot2.png)
 
+#### 3. Update and Delete Existing Record
+
+This is the functionality to edit/delete existing entries in the page. You can simply edit if you by mistake included anything incorrectly or directly delete it.
+
+![image](https://raw.githubusercontent.com/egnascimento/MobileHealthy/master/Screenshots/Screenshot3.png)
 
 ### *Webpage Application*
 #### 1. Manage webpage

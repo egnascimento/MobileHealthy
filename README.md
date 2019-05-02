@@ -6,14 +6,13 @@ Grupo: Luara Barbosa &amp; Eduardo Garcia
 
 ![GitHub Logo](/Screenshots/logo.png) :running:
 
+Check out the video showing the both the App and how it interacts with the web platform --> https://youtu.be/tDEaaRr47Fs
+
 People everyday are becoming very busy accross their modern lives. Basically they need to manage too many activities in paralel combining both personal and professional aspects.
 One of the biggest consequences of it, is that their health, even living in a globally food scene where you can find any product being good or not to your health, even thought is becoming worst everyday.
 People get sick all the time and some constraint diseases are daily becoming part of our lives.
 Based on that, this project will enable you starting a healthy project anywhere it interests you. You can use at you work, your home, or within any group you want to start having a healthy attitude.
 The project allows you controlling the most basic and important data like weight and blood pressure. Like that you can have a constantly follow-up on the quality of life beginning from yourself and a better life plan and actions based on that.
-
-Check out the video showing the both the App and how it interacts with the web platform --> https://youtu.be/tDEaaRr47Fs
-
 
 ## *Used Technologies and Plataforms:*
 
